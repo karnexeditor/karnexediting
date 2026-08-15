@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <title>Karnex | Video Editor</title>
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+</head>
+
+<body>
+    <div class="hero-wrapper">
+        <div class="hero-background">
+
+                    <svg
+                        class="wave-svg"
+        viewBox="0 0 1600 900"
+        preserveAspectRatio="xMidYMid slice"
+    >
+
+        <defs>
+            <linearGradient
+                id="orangeWaveGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+            >
+                <stop offset="0%" stop-color="#FFB001" stop-opacity="0.95" />
+                <stop offset="25%" stop-color="#FF8A00" stop-opacity="0.9" />
+                <stop offset="55%" stop-color="#FD3C01" stop-opacity="0.65" />
+                <stop offset="100%" stop-color="#7A1800" stop-opacity="0.15" />
+            </linearGradient>
+            <linearGradient
+                id="orangeWaveBody"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+            >
+                <stop offset="0%" stop-color="#FFB001" stop-opacity="0.40" />
+                <stop offset="35%" stop-color="#FD6500" stop-opacity="0.30" />
+                <stop offset="70%" stop-color="#B72E00" stop-opacity="0.18" />
+                <stop offset="100%" stop-color="#210B03" stop-opacity="0" />
+            </linearGradient>
+            <filter
+                id="liquidDistortion"
+                x="-30%"
+                y="-30%"
+                width="160%"
+                height="160%"
+            >
+
+                <feTurbulence
+                    type="fractalNoise"
+                    baseFrequency="0.003 0.008"
+                    numOctaves="3"
+                    seed="5"
+                    result="noise"
+                >
+
+                    <animate
+                        attributeName="baseFrequency"
+                        dur="22s"
+                        values="
+                            0.003 0.008;
+                            0.005 0.011;
+                            0.002 0.006;
+                            0.003 0.008
+                        "
+                        repeatCount="indefinite"
+                    />
+
+                </feTurbulence>
+
+                <feDisplacementMap
+                    in="SourceGraphic"
+                    in2="noise"
+                    scale="110"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                />
+
+            </filter>
+
+            <filter
+                id="orangeGlow"
+                x="-50%"
+                y="-50%"
+                width="200%"
+                height="200%"
+            >
+                <feGaussianBlur
+                    stdDeviation="35"
+                />
+            </filter>
+
+        </defs>
+        <path
+            class="wave-glow-path"
+            d="
+                M-200 760
+
+                C80 650
+                180 390
+                470 420
+
+                C700 450
+                760 680
+                980 650
+
+                C1190 620
+                1250 330
+                1500 280
+
+                C1640 250
+                1720 280
+                1800 300
+            "
+        />
+
+        <path
+            class="liquid-wave"
+            filter="url(#liquidDistortion)"
+            fill="url(#orangeWaveBody)"
+            d="
+                M-200 850
+
+                L-200 730
+
+                C80 620
+                180 350
+                470 390
+
+                C700 420
+                760 650
+                980 620
+
+                C1190 590
+                1250 300
+                1500 250
+
+                C1650 220
+                1750 250
+                1800 270
+
+                L1800 950
+
+                Z
+            "
+        >
+
+            <animate
+                attributeName="d"
+                dur="10s"
+                repeatCount="indefinite"
+                values="
+
+                    M-200 850
+                    L-200 730
+                    C80 620 180 350 470 390
+                    C700 420 760 650 980 620
+                    C1190 590 1250 300 1500 250
+                    C1650 220 1750 250 1800 270
+                    L1800 950
+                    Z;
+
+                    M-200 850
+                    L-200 680
+                    C100 560 220 300 480 350
+                    C700 400 800 700 1010 640
+                    C1220 580 1280 340 1510 290
+                    C1650 260 1750 300 1800 320
+                    L1800 950
+                    Z;
+
+                    M-200 850
+                    L-200 760
+                    C60 660 190 420 450 410
+                    C680 400 760 600 960 650
+                    C1190 700 1270 310 1490 230
+                    C1640 180 1750 240 1800 270
+                    L1800 950
+                    Z;
+
+                    M-200 850
+                    L-200 730
+                    C80 620 180 350 470 390
+                    C700 420 760 650 980 620
+                    C1190 590 1250 300 1500 250
+                    C1650 220 1750 250 1800 270
+                    L1800 950
+                    Z
+
+                "
+            />
+
+        </path>
+
+        <path
+            class="liquid-edge"
+            filter="url(#liquidDistortion)"
+            fill="none"
+            stroke="url(#orangeWaveGradient)"
+            stroke-width="85"
+            stroke-linecap="round"
+            d="
+                M-200 730
+
+                C80 620
+                180 350
+                470 390
+
+                C700 420
+                760 650
+                980 620
+
+                C1190 590
+                1250 300
+                1500 250
+
+                C1650 220
+                1750 250
+                1800 270
+            "
+        >
+
+            <animate
+                attributeName="d"
+                dur="10s"
+                repeatCount="indefinite"
+                values="
+
+                    M-200 730
+                    C80 620 180 350 470 390
+                    C700 420 760 650 980 620
+                    C1190 590 1250 300 1500 250
+                    C1650 220 1750 250 1800 270;
+
+                    M-200 680
+                    C100 560 220 300 480 350
+                    C700 400 800 700 1010 640
+                    C1220 580 1280 340 1510 290
+                    C1650 260 1750 300 1800 320;
+
+                    M-200 760
+                    C60 660 190 420 450 410
+                    C680 400 760 600 960 650
+                    C1190 700 1270 310 1490 230
+                    C1640 180 1750 240 1800 270;
+
+                    M-200 730
+                    C80 620 180 350 470 390
+                    C700 420 760 650 980 620
+                    C1190 590 1250 300 1500 250
+                    C1650 220 1750 250 1800 270
+
+                "
+            />
+
+        </path>
+
+        <path
+            class="liquid-highlight"
+            fill="none"
+            stroke="#FFB001"
+            stroke-width="9"
+            stroke-linecap="round"
+            d="
+                M-200 700
+
+                C80 590
+                180 330
+                470 375
+
+                C700 405
+                760 630
+                980 600
+
+                C1190 570
+                1250 280
+                1500 230
+
+                C1650 200
+                1750 230
+                1800 250
+            "
+        />
+
+            </svg>
+            <div class="wave-glow"></div>
+            <div class="particles"></div>
+
+        </div>
+
+        <div class="container">
+            <div class="header">
+
+                <div class="logo">
+                    <a href="#"><img src="Images/sa-tekstom.png"></a>
+                </div>
+
+                <div class="nav-menu">
+                    <a href="#">Work</a>
+                    <a href="#portfolio-id">Portfolio</a>
+                    <a href="#services-id">Services</a>
+                    <a href="#skills-id">Skills</a>
+                    <a href="#faq-id">FAQ</a>
+                </div>
+
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="hire-me-btn">
+                    <a href="https://x.com/karnexeditor" target="_blank">
+                        <button>
+                            Hire me
+                            <img src="Images/arrow.png" alt="">
+                        </button>
+                    </a>
+                    
+                </div>
+
+            </div>
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1>
+                        Video Editing That Keeps<br>Your Audience Watching
+                    </h1>
+                    <h2>
+                        I transform raw footage into engaging, high-retention content that grabs attention and keeps<br> viewers watching. Let’s turn your ideas into videos people actually want to watch.
+                    </h2>
+                    <div class="hero-btns">
+                        <div class="hire-me-btn">
+                            <a href="https://x.com/karnexeditor" target="_blank">
+                                <button>
+                                    Hire me
+                                    <img src="Images/arrow.png" alt="">
+                                </button>
+                            </a>
+                        </div>
+                        <div class="portfolio-btn">
+                            <a href="#portfolio-id">
+                                <button>
+                                    See portfolio
+                                </button>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                const particlesContainer = document.querySelector(".particles");
+                const particleCount = 90;
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement("span");
+                    particle.classList.add("particle");
+                    const size = Math.random() * 2.5 + 0.7;
+                    const left = Math.random() * 100;
+                    const delay = Math.random() * 12;
+                    const duration = Math.random() * 10 + 10;
+                    const opacity = Math.random() * 0.65 + 0.15;
+                    particle.style.width = `${size}px`;                 
+                    particle.style.height = `${size}px`;
+                    particle.style.left = `${left}%`;
+                    particle.style.opacity = opacity;   
+                    particle.style.animationDelay = `-${delay}s`;
+                    particle.style.animationDuration = `${duration}s`;
+                    particlesContainer.appendChild(particle);
+                }
+            </script>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="recent-edit" id="portfolio-id">
+            <h1>My Recent <span>Edits</span></h1>
+            <h2>I craft powerful visual experiences that capture attention, tell stories, and turn ideas into content<br> people remember. See what we can create together.</h2>
+            <video width="1079" height="608" poster="Images/duolingo-thumbnail.png" controls>
+                <source src="Videos/Duolingo-finish.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="short-videos">
+            <h1>Short <span>Videos</span></h1>
+            <div class="short-videos-cards">
+                <video width="350" height="620" poster="Images/gary-vee-thumbnail.png" controls>
+                    <source src="Videos/gary-vee-after.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+                <video width="350" height="620" poster="Images/mr-beast-thumbnail.png" controls>
+                    <source src="Videos/MrBeast-After.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+                <video width="350" height="620" controls>
+                    <source src="Videos/" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="long-videos">
+            <h1>Long <span>Videos</span></h1>
+            <div class="long-videos-cards">
+                <video width="580" height="328" poster="Images/jesus-thumbnail.png" controls>
+                    <source src="Videos/Graham-Cochrane-Jesus-After.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+                <video width="580" height="328" poster="Images/goint-nowhere-thumbnail.png" controls>
+                    <source src="Videos/Graham-Cochrane-Going-Nowhere-After.mp4"video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+                
+            </div>
+            <div class="long-videos-cards">
+                <video width="580" height="328" poster="Images/graham-cochrane-3-thumbnail.png" controls>
+                    <source src="Videos/Graham Cochrane 3 AFTER.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+                <video width="580" height="328" poster="Images/Iman-gadzhi-Ai-thumbnail.png" controls>
+                    <source src="Videos/Iman-Gadzhi-After.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="services-section">
+            <div class="services">
+
+                <div class="what-i-can-do">
+                    <h1 id="services-id">What I can do <span>for You</span></h1>
+                    <h2>I imagine and build experiences, products and<br>businesses that disrupt the status quo, win hearts and<br>realize the future. Explore how we work.</h2>
+                    <div class="hire-me-btn">
+                        <a href="https://x.com/karnexeditor" target="_blank">
+                            <button>
+                                Book a Call Now
+                                <img src="Images/arrow.png" alt="">
+                            </button>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <div class="services-cards">
+                    <div class="srvise-card">
+                        <h1>Short-Form Video</h1>
+                        <h2>Create short-form content that grabs attention from the very first second. I combine fast pacing, clean cuts, captions, sound design, motion graphics and engaging visuals to turn raw footage into content people want to keep watching.</h2>
+                    </div>
+
+                    <div class="srvise-card">
+                        <h1>Long Form Video</h1>
+                        <h2>Turn hours of raw footage into engaging videos that feel smooth, natural and easy to watch. I focus on pacing, storytelling, B-roll, sound design and visual elements that keep the audience interested throughout the entire video.</h2>
+                    </div>
+
+                    <div class="srvise-card">
+                        <h1>Podcast Editing</h1>
+                        <h2>Transform raw podcast conversations into polished and engaging content. From clean cuts and dynamic camera changes to captions, zooms, B-roll and sound design, I make every important moment stand out while keeping the conversation natural.</h2>
+                    </div>
+
+                    <div class="srvise-card">
+                        <h1>Motion Graphics</h1>
+                        <h2>Add movement and personality to your content with clean and purposeful motion graphics. From animated typography and transitions to visual effects and custom elements, I create visuals that make your message easier to understand and your videos more memorable.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="skills-wrapper">
+            <div class="skills">
+                <h1 id="skills-id">Skills</h1>
+                <h2>Each skill is a brushstroke contributing to the masterpiece of your online presence. Let me<br> weave innovation, aesthetics, and leadership into the fabric of your digital journey.</h2>
+            </div>
+
+            <div class="skills-marquee">
+
+                <div class="skills-row row-left">
+                    <div class="skills-track">
+                        <span>Video Editing</span>
+                        <span>YouTube Editing</span>
+                        <span>Dynamic Cutting</span>
+                        <span>Pacing</span>
+                        <span>B-Roll Integration</span>
+                        <span>Retention Editing</span>
+                        <span>Color Correction</span>
+                        <span>Color Grading</span>
+
+                        <span>Video Editing</span>
+                        <span>YouTube Editing</span>
+                        <span>Dynamic Cutting</span>
+                        <span>Pacing</span>
+                        <span>B-Roll Integration</span>
+                        <span>Retention Editing</span>
+                        <span>Color Correction</span>
+                        <span>Color Grading</span>
+                    </div>
+                </div>
+
+                <div class="skills-row row-right">
+                    <div class="skills-track">
+                        <span>Audio Editing</span>
+                        <span>Sound Design</span>
+                        <span>Motion Graphics</span>
+                        <span>Text Animation</span>
+                        <span>Dynamic Captions</span>
+                        <span>Visual Effects</span>
+                        <span>Transitions & Effects</span>
+                        <span>Masking & Tracking</span>
+
+                        <span>Audio Editing</span>
+                        <span>Sound Design</span>
+                        <span>Motion Graphics</span>
+                        <span>Text Animation</span>
+                        <span>Dynamic Captions</span>
+                        <span>Visual Effects</span>
+                        <span>Transitions & Effects</span>
+                        <span>Masking & Tracking</span>
+                    </div>
+                </div>
+
+                <div class="skills-row row-left">
+                    <div class="skills-track">
+                        <span>Short-Form Editing</span>
+                        <span>Long-Form Editing</span>
+                        <span>Jump Cuts</span>
+                        <span>Sound Effects</span>
+                        <span>Kinetic Typography</span>
+                        <span>Shot Matching</span>
+                        <span>Multicam Editing</span>
+                        <span>Visual Compositing</span>
+
+                        <span>Short-Form Editing</span>
+                        <span>Long-Form Editing</span>
+                        <span>Jump Cuts</span>
+                        <span>Sound Effects</span>
+                        <span>Kinetic Typography</span>
+                        <span>Shot Matching</span>
+                        <span>Multicam Editing</span>
+                        <span>Visual Compositing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="faq" id="faq-id">
+            <h1>Frequently <span>Asked Questions</span></h1>
+            <div class="faq-wrapper">
+                <div class="questions">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What type of videos do you edit?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                I edit a wide range of content, including YouTube videos,
+                                podcast clips, Shorts, Reels, TikToks, ads, and other
+                                social media content.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How long does it take to edit a video?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                Turnaround time depends on the length and complexity of the
+                                video. Most projects are completed within a few days.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What do you need from me to get started?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                I'll need your raw footage, any references or examples you
+                                like, and any specific instructions you want me to follow.
+                                From there, I'll take care of the editing.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can you edit both short-form and long-form content?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                Yes. I work with both long-form YouTube content and
+                                short-form videos such as Reels, Shorts, and TikToks.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you add captions, motion graphics and sound effects?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                Yes. I can add animated captions, motion graphics, transitions,
+                                sound effects, music, B-roll, and other visual elements
+                                depending on the style of the video.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I request changes after the first version?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                Absolutely. You can give me feedback after reviewing the
+                                first version, and I'll make the necessary adjustments.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How can I get in touch with you?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                You can reach out to me through X or send me a message using
+                                the contact button. Tell me a little about your project and
+                                I'll get back to you as soon as possible.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="get-in-touch">
+                    <h2>Ready to get started?<br> Get in touch.</h2>
+                    <a href="https://x.com/karnexeditor" target="_blank">
+                        <button class="get-in-touch-btn">Get in Touch <img src="Images/arrow-w.png"></button>
+                    </a>   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-wrapper">
+        <div class="container">
+            <div class="footer">
+                <div class="karnex-footer">
+                    <img src="Images/sa-tekstom.png">
+                    <h2>Turning ideas into edits that get noticed.</h2>
+                    <h1>Let's connect!</h1>
+                    <a href="https://x.com/karnexeditor" target="_blank"><img class="x" src="Images/twitter.png" alt=""></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=karnex.editor@gmail.com" target="_blank"><img class="email" src="Images/email.png" alt=""></a>
+                </div>
+
+                <div class="footer-menu">
+                    <h1>Section</h1>
+                    <a href="#">Work</a>
+                    <a href="#portfolio-id">Portfolio</a>
+                    <a href="#services-id">Services</a>
+                    <a href="#skills-id">Skills</a>
+                    <a href="#faq-id">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-desc">
+                <h2>© 2026. All rights reserved</h2>
+                <h3>Designed and Developed By <a href="https://x.com/karnexeditor" target="_blank"><span>Karnex</span></a></h3>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html> 

@@ -1,0 +1,1015 @@
+img,
+video {
+    max-width: 100%;
+}
+
+
+.container {
+    width: 100%;
+}
+
+@media (max-width: 1199px) {
+    .recent-edit video {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .header {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .header .logo img {
+        width: 175px;
+    }
+
+    .header .nav-menu {
+        gap: 1.5rem;
+    }
+
+    .header .hire-me-btn button {
+        font-size: 16px;
+        padding: 11px 24px;
+    }
+
+    .hero-section h1 {
+        font-size: 62px;
+    }
+
+    .hero-section h2 {
+        font-size: 18px;
+    }
+
+    .recent-edit {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .recent-edit h1 {
+        font-size: 42px;
+    }
+
+    .recent-edit h2 {
+        font-size: 18px;
+    }
+
+    .recent-edit video {
+        width: 100%;
+        height: auto;
+    }
+
+    .short-videos {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .short-videos .short-videos-cards {
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .short-videos .short-videos-cards video {
+        width: calc((100% - 50px) / 3);
+        height: auto;
+    }
+
+    .long-videos {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .long-videos .long-videos-cards {
+        gap: 25px;
+    }
+
+    .long-videos .long-videos-cards video {
+        width: calc((100% - 25px) / 2);
+        height: auto;
+    }
+
+    .services {
+        gap: 30px;
+    }
+
+    .services .what-i-can-do h1 {
+        font-size: 48px;
+    }
+
+    .services .what-i-can-do h2 {
+        font-size: 18px;
+    }
+
+    .services .services-cards .srvise-card {
+        width: 100%;
+        height: 380px;
+    }
+
+    .services .services-cards .srvise-card h1 {
+        font-size: 28px;
+        margin-left: 30px;
+        margin-right: 20px;
+    }
+
+    .services .services-cards .srvise-card h2 {
+        font-size: 18px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .skills-wrapper {
+        margin-top: -100px;
+    }
+
+    .skills h1 {
+        font-size: 48px;
+    }
+
+    .skills h2 {
+        font-size: 18px;
+    }
+
+    .skills-track {
+        gap: 50px;
+    }
+
+    .skills-track span {
+        font-size: 26px;
+    }
+
+    .faq {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .faq h1 {
+        font-size: 45px;
+    }
+
+    .faq .faq-wrapper {
+        gap: 25px;
+    }
+
+    .faq .faq-wrapper .questions {
+        width: 62%;
+    }
+
+    .faq .faq-wrapper .get-in-touch {
+        width: 38%;
+        flex: 0 0 38%;
+    }
+
+    .footer-wrapper .footer {
+        padding-top: 80px;
+    }
+
+    .footer-wrapper .footer-menu h1 {
+        margin-right: 50px;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .header {
+        padding: 18px 1.25rem;
+    }
+
+    .header .logo img {
+        width: 160px;
+    }
+
+    .header .nav-menu {
+        gap: 1rem;
+    }
+
+    .header .nav-menu a {
+        font-size: 15px;
+    }
+
+    .header .hire-me-btn button {
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+
+    .hero-section {
+        min-height: calc(100vh - 70px);
+    }
+
+    .hero-section h1 {
+        font-size: 52px;
+        line-height: 1.08;
+    }
+
+    .hero-section h2 {
+        font-size: 17px;
+        line-height: 1.45;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-section .hero-btns {
+        padding-top: 30px;
+    }
+
+    .recent-edit {
+        min-height: auto;
+        padding-bottom: 80px;
+    }
+
+    .recent-edit h1 {
+        font-size: 40px;
+        padding-top: 60px;
+    }
+
+    .recent-edit h2 {
+        font-size: 17px;
+    }
+
+    .recent-edit video {
+        margin-top: 25px;
+        width: 100%;
+        height: auto;
+    }
+
+    .short-videos {
+        min-height: auto;
+        padding-bottom: 80px;
+    }
+
+    .short-videos h1 {
+        font-size: 40px;
+    }
+
+    .short-videos .short-videos-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 25px;
+    }
+
+    .short-videos .short-videos-cards video {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .short-videos .short-videos-cards video:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .long-videos {
+        min-height: auto;
+        padding-bottom: 80px;
+    }
+
+    .long-videos h1 {
+        font-size: 40px;
+    }
+
+    .long-videos .long-videos-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .long-videos .long-videos-cards video {
+        width: 100%;
+        height: auto;
+    }
+
+    .services-section {
+        height: auto;
+        min-height: 0;
+    }
+
+    .services {
+        position: relative;
+        top: auto;
+        height: auto;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+        gap: 40px;
+    }
+
+    .services .what-i-can-do {
+        width: 100%;
+        flex: none;
+        text-align: center;
+    }
+
+    .services .what-i-can-do h1 {
+        font-size: 45px;
+    }
+
+    .services .what-i-can-do h2 {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .services .what-i-can-do .hire-me-btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    .services .services-cards {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        flex: none;
+    }
+
+    .services .services-cards .srvise-card {
+        position: relative;
+        left: auto;
+        width: 100%;
+        height: auto;
+        min-height: 320px;
+        transform: none !important;
+        transition: none;
+    }
+
+    .services .services-cards .srvise-card h1 {
+        font-size: 26px;
+        margin: 45px 25px 15px;
+    }
+
+    .services .services-cards .srvise-card h2 {
+        font-size: 17px;
+        margin: 0 25px 25px;
+        line-height: 1.4;
+    }
+
+    .skills-wrapper {
+        margin-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .skills h1 {
+        font-size: 45px;
+    }
+
+    .skills h2 {
+        font-size: 17px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .skills-track {
+        gap: 40px;
+    }
+
+    .skills-track span {
+        font-size: 24px;
+    }
+
+    .faq {
+        height: auto;
+        min-height: 0;
+        padding-top: 30px;
+        padding-bottom: 80px;
+    }
+
+    .faq h1 {
+        font-size: 42px;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .faq .faq-wrapper {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .faq .faq-wrapper .questions {
+        width: 100%;
+    }
+
+    .faq .faq-wrapper .get-in-touch {
+        width: 100%;
+        flex: none;
+    }
+
+    .footer-wrapper .footer {
+        padding-top: 70px;
+    }
+
+    .footer-wrapper .footer-menu h1 {
+        margin-right: 0;
+    }
+
+    .footer-wrapper .footer-desc {
+        padding-top: 70px;
+        padding-bottom: 40px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .header {
+        padding: 15px 18px;
+    }
+
+    .header .logo img {
+        width: 140px;
+    }
+
+    .header .nav-menu {
+        display: none;
+    }
+
+    .header .hire-me-btn {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 28px;
+        height: 20px;
+        margin-left: 18px;
+        cursor: pointer;
+        z-index: 10001;
+    }
+
+    .mobile-menu-btn span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .header .nav-menu.active {
+        display: flex;
+        position: absolute;
+        top: 75px;
+        right: 18px;
+        width: 200px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 15px 0;
+        background: rgba(0, 9, 15, 0.95);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid #39444a;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .header .nav-menu.active a {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    .header .nav-menu.active a:hover {
+        background: rgba(255, 176, 1, 0.08);
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .header .hire-me-btn button {
+        font-size: 14px;
+        padding: 9px 16px;
+        gap: 7px;
+        border-radius: 8px;
+    }
+
+    .header .hire-me-btn img {
+        width: 13px;
+        height: 13px;
+    }
+
+    .hero-section {
+        min-height: 100svh;
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+
+    .hero-section h1 {
+        font-size: clamp(38px, 10vw, 52px);
+        line-height: 1.05;
+        padding: 0 5px;
+    }
+
+    .hero-section h2 {
+        font-size: 16px;
+        line-height: 1.45;
+        padding: 18px 5px 0;
+    }
+
+    .hero-section .hero-btns {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding-top: 30px;
+    }
+
+    .hero-section .hire-me-btn button,
+    .hero-section .portfolio-btn button {
+        width: 190px;
+        justify-content: center;
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+
+    .wave-svg {
+        width: 180vw;
+        height: 130vh;
+        top: -5vh;
+        left: -40vw;
+    }
+
+    .wave-glow {
+        width: 100vw;
+        height: 100vw;
+        left: -35%;
+        top: -10%;
+    }
+
+    .wave-glow-path {
+        stroke-width: 180px;
+    }
+
+    .liquid-edge {
+        stroke-width: 120px;
+    }
+
+    .recent-edit {
+        min-height: auto;
+        height: auto;
+        padding-bottom: 70px;
+    }
+
+    .recent-edit h1 {
+        font-size: clamp(32px, 9vw, 42px);
+        padding-top: 55px;
+        padding-bottom: 12px;
+    }
+
+    .recent-edit h2 {
+        font-size: 16px;
+        line-height: 1.45;
+        padding: 0 5px;
+    }
+
+    .recent-edit video {
+        width: 100%;
+        height: auto;
+        margin-top: 22px;
+        border-radius: 14px;
+    }
+
+    .short-videos {
+        height: auto;
+        min-height: 0;
+        padding-bottom: 70px;
+    }
+
+    .short-videos h1 {
+        font-size: clamp(32px, 9vw, 42px);
+        padding-top: 35px;
+        padding-bottom: 12px;
+    }
+
+    .short-videos .short-videos-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        padding-top: 20px;
+    }
+
+    .short-videos .short-videos-cards video,
+    .short-videos .short-videos-cards video:last-child {
+        width: min(100%, 300px);
+        max-width: 300px;
+        height: auto;
+        grid-column: auto;
+        border-radius: 16px;
+    }
+
+    .long-videos {
+        height: auto;
+        min-height: 0;
+        padding-bottom: 70px;
+    }
+
+    .long-videos h1 {
+        font-size: clamp(32px, 9vw, 42px);
+        padding-top: 35px;
+        padding-bottom: 12px;
+    }
+
+    .long-videos .long-videos-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        padding-top: 20px;
+    }
+
+    .long-videos .long-videos-cards video {
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+    }
+
+    .services-section {
+        height: auto;
+        min-height: 0;
+    }
+
+    .services {
+        position: relative;
+        top: auto;
+        height: auto;
+        min-height: 0;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        gap: 35px;
+    }
+
+    .services .what-i-can-do {
+        text-align: center;
+    }
+
+    .services .what-i-can-do h1 {
+        font-size: clamp(34px, 9vw, 44px);
+        line-height: 1.05;
+        padding-bottom: 15px;
+    }
+
+    .services .what-i-can-do h2 {
+        font-size: 16px;
+        line-height: 1.45;
+        padding: 0 5px 20px;
+    }
+
+    .services .what-i-can-do .hire-me-btn {
+        justify-content: center;
+    }
+
+    .services .what-i-can-do .hire-me-btn button {
+        padding: 14px 25px;
+        font-size: 16px;
+    }
+
+    .services .services-cards {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .services .services-cards .srvise-card {
+        position: relative;
+        left: auto;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        padding-bottom: 30px;
+        transform: none !important;
+        transition: none;
+        border-radius: 16px;
+    }
+
+    .services .services-cards .srvise-card h1 {
+        font-size: 25px;
+        line-height: 1.1;
+        margin: 35px 25px 15px;
+        padding-bottom: 0;
+    }
+
+    .services .services-cards .srvise-card h2 {
+        font-size: 16px;
+        line-height: 1.45;
+        margin: 0 25px;
+    }
+
+    .skills-wrapper {
+        margin-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    .skills h1 {
+        font-size: clamp(34px, 9vw, 44px);
+    }
+
+    .skills h2 {
+        font-size: 16px;
+        line-height: 1.45;
+        padding: 12px 5px 25px;
+    }
+
+    .skills-marquee {
+        margin-top: 10px;
+    }
+
+    .skills-row {
+        margin: 20px 0;
+    }
+
+    .skills-track {
+        gap: 35px;
+    }
+
+    .skills-track span {
+        font-size: 20px;
+    }
+
+    .faq {
+        height: auto;
+        min-height: 0;
+        padding-top: 20px;
+        padding-bottom: 60px;
+    }
+
+    .faq h1 {
+        font-size: clamp(31px, 8.5vw, 40px);
+        line-height: 1.05;
+        padding-top: 30px;
+        padding-bottom: 25px;
+    }
+
+    .faq .faq-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .faq .faq-wrapper .questions {
+        width: 100%;
+    }
+
+    .questions {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .faq-item {
+        border-width: 1px;
+        border-radius: 7px;
+    }
+
+    .faq-question {
+        min-height: 58px;
+        padding: 0 15px;
+        font-size: 16px;
+        gap: 15px;
+    }
+
+    .faq-icon {
+        font-size: 22px;
+        flex-shrink: 0;
+    }
+
+    .faq-answer {
+        padding: 0 15px;
+    }
+
+    .faq-answer p {
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 0 15px 16px;
+    }
+
+    .faq .faq-wrapper .get-in-touch {
+        width: 100%;
+        flex: none;
+        padding: 25px 20px;
+        border-radius: 14px;
+        font-size: 18px;
+    }
+
+    .footer-wrapper .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 45px;
+        padding-top: 60px;
+    }
+
+    .footer-wrapper .footer .karnex-footer {
+        align-items: center;
+    }
+
+    .footer-wrapper .footer .karnex-footer img {
+        width: 150px;
+    }
+
+    .footer-wrapper .footer .karnex-footer h2 {
+        font-size: 15px;
+    }
+
+    .footer-wrapper .footer .karnex-footer h1 {
+        font-size: 21px;
+    }
+
+    .footer-wrapper .footer .footer-menu {
+        align-items: center;
+        gap: 8px;
+    }
+
+    .footer-wrapper .footer .footer-menu h1 {
+        font-size: 20px;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .footer-wrapper .footer .footer-menu a {
+        font-size: 16px;
+    }
+
+    .footer-wrapper .footer-desc {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    .footer-wrapper .footer-desc h2,
+    .footer-wrapper .footer-desc h3 {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 479px) {
+    .container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .header {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .header .logo img {
+        width: 125px;
+    }
+
+    .header .hire-me-btn button {
+        font-size: 13px;
+        padding: 8px 13px;
+        border-radius: 7px;
+    }
+
+    .header .hire-me-btn img {
+        width: 12px;
+        height: 12px;
+    }
+
+    .hero-section {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .hero-section h1 {
+        font-size: clamp(34px, 10vw, 42px);
+    }
+
+    .hero-section h2 {
+        font-size: 15px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hero-section .hire-me-btn button,
+    .hero-section .portfolio-btn button {
+        width: 180px;
+        font-size: 15px;
+        padding: 13px 18px;
+    }
+
+    .recent-edit h1,
+    .short-videos h1,
+    .long-videos h1 {
+        font-size: 34px;
+    }
+
+    .recent-edit h2,
+    .services .what-i-can-do h2,
+    .skills h2 {
+        font-size: 15px;
+    }
+
+    .services .what-i-can-do h1 {
+        font-size: 34px;
+    }
+
+    .services .services-cards .srvise-card h1 {
+        font-size: 23px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .services .services-cards .srvise-card h2 {
+        font-size: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .skills h1 {
+        font-size: 34px;
+    }
+
+    .skills-track {
+        gap: 28px;
+    }
+
+    .skills-track span {
+        font-size: 18px;
+    }
+
+    .faq h1 {
+        font-size: 32px;
+    }
+
+    .faq-question {
+        font-size: 15px;
+        min-height: 55px;
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+    .faq-answer p {
+        font-size: 13px;
+    }
+
+    .faq .faq-wrapper .get-in-touch {
+        font-size: 17px;
+    }
+
+    .footer-wrapper .footer .karnex-footer img {
+        width: 135px;
+    }
+
+    .footer-wrapper .footer-desc h2,
+    .footer-wrapper .footer-desc h3 {
+        font-size: 13px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
